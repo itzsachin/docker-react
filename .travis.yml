@@ -1,4 +1,5 @@
 sudo: required
+
 services:
   - docker
 
@@ -7,6 +8,7 @@ before_install:
 
 script:
   - docker run exigent/docker-react npm run test -- --coverage
+
 deploy:
   provider: elasticbeanstalk
   region: "eu-west-1"
